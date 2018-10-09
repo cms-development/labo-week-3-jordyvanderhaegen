@@ -1,0 +1,12 @@
+<div class="card" *ngIf="recipe">
+  <h5 class="card-header">Recept</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{recipe.cuisine | uppercase}}</h5>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient }}
+      </li>
+    </ul>
+  </div>
+</div>
+<button (click)="goBack()" class="btn btn-primary mt-3">go back</button>
