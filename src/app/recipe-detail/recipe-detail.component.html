@@ -1,12 +1,15 @@
 <div class="card" *ngIf="recipe">
-  <h5 class="card-header">Recept</h5>
+  <h5 class="card-header">{{ recipe.title.rendered }}</h5>
   <div class="card-body">
-    <h5 class="card-title">{{recipe.cuisine | uppercase}}</h5>
-    <ul>
-      <li *ngFor="let ingredient of recipe.ingredients">
-        {{ ingredient }}
-      </li>
-    </ul>
+    <h5 class="card-title">{{recipe.acf.introtekst}}</h5>
+    <div innerHTML="{{recipe.content.rendered}}"></div>
+    <p><strong>Ingrediënten: </strong>{{recipe.meta_fields._recipe_ingredient}}</p>
+    <p><strong>Alcohol: </strong>{{recipe.acf.alcohol}}</p>
+    <h4 class="mt-4">Images</h4>
+    <img class="" src="{{recipe.acf.image1.sizes.medium}}" alt="">
+    <img class="ml-3" src="{{recipe.acf.image2.sizes.medium}}" alt="">
+    <h4 class="mt-4">Featured image</h4>
+    <img src="{{ recipe._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}}" alt="">
   </div>
 </div>
 <button (click)="goBack()" class="btn btn-primary mt-3">go back</button>

@@ -3,8 +3,8 @@
     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
       <div class="card-header">{{ recipe.id }}</div>
       <div class="card-body">
-        <a routerLink="/detail/{{recipe.id}}" class="text-white">
-          <h5 class="card-title">{{recipe.cuisine}}</h5>
+        <a routerLink="/recept/{{recipe.id}}" class="text-white">
+          <h5 class="card-title">{{recipe.title.rendered}}</h5>
         </a>
       </div>
     </div>

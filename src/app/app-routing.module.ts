@@ -8,8 +8,8 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'recipes', component: RecipesComponent },
-  { path: 'detail/:id', component: RecipeDetailComponent },
+  { path: 'recepten', component: RecipesComponent },
+  { path: 'recept/:id', component: RecipeDetailComponent },
 ];
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
